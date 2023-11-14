@@ -1,0 +1,157 @@
+* {
+    box-sizing: content-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    background-color: rgb(41, 41, 41);
+}
+header {
+    height: 100px;
+    background-color: black;
+}
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+}
+
+.card {
+    padding: 10px;
+    background-color: white;
+    width: 300px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border-radius: 10px;
+    margin: 20px;
+}
+.imagen {
+    top: 0;
+    width: 300px;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 225px;
+}
+.titulo-area {
+    text-align: left;
+    margin: 0px;
+}
+
+.area-pix {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    margin-top: -30px;
+}
+.area-pix h3 {
+    margin-right: 4px;
+}
+.area-cor div h4 {
+    margin: 0px;
+    margin-bottom: 7px;
+}
+.cor {
+    display: flex;
+}
+.cor button {
+    border: 0px;
+    cursor: pointer;
+    border: solid 1px black;
+}
+.circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 10%;
+    margin-right: 7px;
+ 
+}
+.vermelho {
+    background-color: red;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.preto {
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.branco {
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.beje {
+    background-color: burlywood(173, 48, 48);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.prata {
+    background-color: rgb(102, 102, 102);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.botao-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botao {
+    background-color: rgb(85, 202, 85);
+    margin-top: 15px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    
+}
+@media (min-device-width: 250px) and (max-device-width: 650px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .card {
+        padding: 10px;
+        background-color: white;
+        width: 300px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        border-radius: 10px;
+        margin: 20px;
+    }
+}
+@media (min-device-width: 650px) and (max-device-width: 1410px) {
+    .cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 100vh;
+
+    }
+    .card {
+        padding: 10px;
+        background-color: white;
+        width: 300px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        border-radius: 10px;
+        margin: 20px;
+    }
+}
