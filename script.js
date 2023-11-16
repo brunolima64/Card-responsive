@@ -38,3 +38,24 @@ function relBeje() {
     cartaoRelogio.innerText = "R$ 3.299,00 em 10x de R$ 329,90 sem juros ou"
 
 }
+// area modal de login/registre 
+
+let imgPerfilModal = document.querySelector('.btn-perfil');
+let modal = document.querySelector('.modal-area');
+let modalClosed = document.querySelector('.modal-closed');
+
+let pag = document.querySelector('body');
+
+modalClosed.addEventListener('click', ()=>{
+    closedModal()
+})
+imgPerfilModal.addEventListener('click', ()=>{
+    openModal()
+})
+
+function openModal() {
+    modal.setAttribute('style', 'flex')
+}
+function closedModal() {
+    modal.setAttribute('style', 'display: none');
+}

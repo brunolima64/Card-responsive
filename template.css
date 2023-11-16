@@ -4,7 +4,7 @@
 }
 body {
     margin: 0;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(210, 210, 243);
 }
 header {
     height: 100px;
@@ -13,6 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    border-bottom: 2px dotted white;
 }
 .btn-menu {
     width: 25px;
@@ -38,6 +39,68 @@ header {
     border: 2px solid #fff;
     cursor: pointer;
 }
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-area {
+    position: absolute;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 9px 9px 20px black;
+    border: 2px solid black;
+}
+.login-modal-left {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.login-modal-left img {
+    background-position: center;
+    overflow: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 100%;
+
+}
+.login-modal-right h1 {
+    text-shadow: 1px 5px 5px #818181;
+}
+.login-modal-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.login-modal-right input {
+    margin-bottom: 8px;
+    border-radius: 5px;
+    padding: 6px;
+    border: 1px solid #5e5e5f;
+    outline: 0;
+}
+.login-modal-right button {
+    background-color: #3080db;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6px;
+    color: #fff;
+    border: 0px;
+    margin-bottom: 8px;
+}
+.login-modal-right button:hover {
+    background-color: #0c4b92;
+}
+
 .cards {
     display: flex;
     align-items: center;
@@ -55,6 +118,7 @@ header {
     align-items: left;
     border-radius: 10px;
     margin: 20px;
+    box-shadow: 2px 5px 20px black;
 }
 .imagen {
     top: 0;
@@ -144,7 +208,14 @@ header {
     cursor: pointer;
     
 }
-@media (min-device-width: 250px) and (max-device-width: 650px) {
+.botao:hover {
+    background-color: rgb(63, 150, 63);
+}
+@media (min-device-width: 200px) and (max-device-width: 500px) {
+    header {
+        height: 80px;
+    }
+    
     .cards {
         display: flex;
         flex-direction: column;
@@ -159,10 +230,41 @@ header {
         flex-direction: column;
         align-items: left;
         border-radius: 10px;
-        margin: 20px;
     }
+
+    .modal-area {
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+    }
+
+    .login-modal-left {
+        display: none;
+    }
+
+    .login-modal-right h1 {
+        text-shadow: 1px 5px 5px #818181;
+        font-size: 24px;
+    }
+
+    .login-modal-right {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    
 }
-@media (min-device-width: 650px) and (max-device-width: 1410px) {
+@media (min-device-width: 500px) and (max-device-width: 1410px) {
+
+    header {
+        height: 80px;
+    }
+
     .cards {
         display: flex;
         align-items: center;
@@ -173,6 +275,7 @@ header {
     }
     .card {
         padding: 10px;
+        margin-top: 0px;
         background-color: white;
         width: 300px;
         height: 550px;
@@ -180,6 +283,60 @@ header {
         flex-direction: column;
         align-items: left;
         border-radius: 10px;
-        margin: 20px;
+    }
+    .modal-area {
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        width: 500px;
+        height: 500px;
+        
+    }
+    .login-modal-left {
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .login-modal-left img {
+        background-position: center;
+        overflow: cover;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: 100%;
+    
+    }
+    .login-modal-right h1 {
+        text-shadow: 1px 5px 5px #818181;
+    }
+    .login-modal-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .login-modal-right input {
+        margin-bottom: 8px;
+        border-radius: 5px;
+        padding: 6px;
+        border: 1px solid #5e5e5f;
+        outline: 0;
+    }
+    .login-modal-right button {
+        background-color: #3080db;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 6px;
+        color: #fff;
+        border: 0px;
+        margin-bottom: 8px;
     }
 }
